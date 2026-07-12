@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 INPUT_CSV = 'colleges.csv'
 OUTPUT_CSV = 'engineering_colleges.csv'
 FAILED_CSV = 'failed.csv'
-MAX_WORKERS = 5
+MAX_WORKERS = 1
 
 def validate_and_return(local_path, result_dict, source, url, confidence, original_name):
     if local_path and is_valid_logo(local_path):
@@ -50,8 +50,12 @@ def validate_and_return(local_path, result_dict, source, url, confidence, origin
 import re
 
 def clean_search_name(name: str) -> str:
-    # Replace hyphens and commas with spaces rather than splitting and dropping
-    name = name.replace('-', ' ')
+    # If there is a hyphen, usually one part is an abbreviation and the other is the full name.
+    # Take the longest part to ensure Wikipedia search works.
+    parts = str(name).split('-')
+    if len(parts) > 1:
+        name = max(parts, key=len).strip()
+        
     name = name.replace(',', ' ')
     # Remove things in parentheses
     name = re.sub(r'\(.*?\)', '', name)
@@ -240,6 +244,7 @@ def main():
             future_to_college = {executor.submit(process_college, c): c for c in to_process}
             
             for future in tqdm(as_completed(future_to_college), total=len(to_process), desc="Scraping Logos"):
+                time.sleep(0.5)
                 try:
                     res = future.result()
                     if res['status'] == 'success':

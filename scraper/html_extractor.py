@@ -83,7 +83,8 @@ def is_valid_logo_url(url: str, alt: str = "") -> bool:
         'rank', 'badge', 'award', 'metric', 'nba', 'naac', 'aicte', 'iso', 'qs', 'nirf', 
         'nptel', 'swayam', 'ugc', 'mhrd', 'azadi', 'g20', 'campaign', 'banner',
         'instagram', 'facebook', 'twitter', 'youtube', 'linkedin', 'whatsapp', 
-        'telegram', 'pinterest', 'discord', 'snapchat', 'tiktok', 'social', 'x.com'
+        'telegram', 'pinterest', 'discord', 'snapchat', 'tiktok', 'social', 'x.com',
+        'jubilee', 'anniversary', 'diamond', 'golden', 'silver', '60', '75', '100', 'years'
     ]
     for b in badges:
         if b in combined:
