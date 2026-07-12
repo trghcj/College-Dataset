@@ -140,9 +140,18 @@ def search_official_website(college_name: str, max_retries: int = 3) -> str:
                     
                 # Rank valid URLs based on domain priority
                 ranked_urls = []
+                # Extract long words from college name to match against domains
+                import re
+                name_words = [w.lower() for w in re.split(r'\W+', college_name) if len(w) >= 5 and w.lower() not in ['college', 'institute', 'engineering', 'technology', 'university', 'science', 'school', 'management', 'research', 'academy']]
+                
                 for url in valid_urls:
                     domain = extract_domain(url)
                     priority = get_domain_priority(domain)
+                    
+                    # Boost priority if a unique word from the college name is in the domain
+                    matched_words = sum(1 for w in name_words if w in domain)
+                    priority -= (matched_words * 2) # Heavily boost matching domains
+                    
                     print(f"DEBUG: Domain {domain} priority {priority}")
                     if priority < 99:
                         ranked_urls.append((priority, url))
@@ -151,8 +160,8 @@ def search_official_website(college_name: str, max_retries: int = 3) -> str:
                     print(f"DEBUG: No ranked urls for {query}")
                     continue
                     
-                # Sort by priority
-                ranked_urls.sort(key=lambda x: x[0])
+                # Sort by priority, then by domain length (to prefer base domains)
+                ranked_urls.sort(key=lambda x: (x[0], len(extract_domain(x[1]))))
                 
                 # Return the best match
                 print(f"DEBUG: Best match for {query}: {ranked_urls[0][1]}")

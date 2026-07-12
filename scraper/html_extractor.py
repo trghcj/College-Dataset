@@ -48,7 +48,7 @@ def get_og_image(soup: BeautifulSoup, base_url: str) -> str:
         if tag and tag.get('content'):
             img_url = tag.get('content')
             # STRICT FILTER: OpenGraph images are often full posters. Only accept if it says 'logo'
-            if 'logo' in img_url.lower():
+            if 'logo' in img_url.lower() and is_valid_logo_url(img_url):
                 return urljoin(base_url, img_url)
     return ""
 
@@ -60,18 +60,25 @@ def get_json_ld_logo(soup: BeautifulSoup, base_url: str) -> str:
         if not script.string: continue
         try:
             data = json.loads(script.string)
-            if isinstance(data, dict):
-                # Check for logo directly
-                if 'logo' in data:
-                    logo = data['logo']
-                    if isinstance(logo, str): return urljoin(base_url, logo)
-                    if isinstance(logo, dict) and 'url' in logo: return urljoin(base_url, logo['url'])
-                # Or check if it's CollegeOrUniversity and has an image
+            if isinstance(data, list):
+                data_list = data
+            else:
+                data_list = [data]
+                
+            for data in data_list:
                 if data.get('@type') in ['CollegeOrUniversity', 'EducationalOrganization', 'Organization']:
                     if 'image' in data:
                         img = data['image']
-                        if isinstance(img, str): return urljoin(base_url, img)
-                        if isinstance(img, dict) and 'url' in img: return urljoin(base_url, img['url'])
+                        url = None
+                        if isinstance(img, str): url = urljoin(base_url, img)
+                        elif isinstance(img, dict) and 'url' in img: url = urljoin(base_url, img['url'])
+                        if url and is_valid_logo_url(url): return url
+                    if 'logo' in data:
+                        img = data['logo']
+                        url = None
+                        if isinstance(img, str): url = urljoin(base_url, img)
+                        elif isinstance(img, dict) and 'url' in img: url = urljoin(base_url, img['url'])
+                        if url and is_valid_logo_url(url): return url
         except json.JSONDecodeError:
             continue
     return ""
@@ -84,7 +91,8 @@ def is_valid_logo_url(url: str, alt: str = "") -> bool:
         'nptel', 'swayam', 'ugc', 'mhrd', 'azadi', 'g20', 'campaign', 'banner',
         'instagram', 'facebook', 'twitter', 'youtube', 'linkedin', 'whatsapp', 
         'telegram', 'pinterest', 'discord', 'snapchat', 'tiktok', 'social', 'x.com',
-        'jubilee', 'anniversary', 'diamond', 'golden', 'silver', '60', '75', '100', 'years'
+        'jubilee', 'anniversary', 'diamond', 'golden', 'silver', '60', '75', '100', 'years',
+        'cms', 'erp', 'portal', 'intellect', 'samarth', 'management'
     ]
     for b in badges:
         if b in combined:
@@ -101,35 +109,40 @@ def get_header_logo(soup: BeautifulSoup, base_url: str) -> str:
         
     import re
     bg_regex = re.compile(r'url\([\'"]?([^\'"]+?)[\'"]?\)')
+    
+    candidates = []
         
     for header in headers:
-        # Search by specific classes first
-        imgs = header.find_all("img", class_=lambda x: x and any(c in x.lower() for c in ['logo', 'brand', 'site-logo']))
-        for img in imgs:
-            if img and img.get('src') and is_valid_logo_url(img.get('src'), img.get('alt', '')):
-                return urljoin(base_url, img.get('src'))
-            
-        # Fallback to id
-        imgs = header.find_all("img", id=lambda x: x and 'logo' in x.lower())
-        for img in imgs:
-            if img and img.get('src') and is_valid_logo_url(img.get('src'), img.get('alt', '')):
-                return urljoin(base_url, img.get('src'))
-            
-        # Fallback to any image with 'logo' in src
         imgs = header.find_all("img")
-        for i in imgs:
-            if i.get('src') and 'logo' in i.get('src').lower():
-                if is_valid_logo_url(i.get('src'), i.get('alt', '')):
-                    return urljoin(base_url, i.get('src'))
-                
-        # CSS Background Image check
-        for tag in header.find_all(style=True):
+        for img in imgs:
+            src = img.get('src')
+            if not src: continue
+            alt = img.get('alt', '')
+            class_str = str(img.get('class', '')).lower()
+            id_str = str(img.get('id', '')).lower()
+            
+            if 'logo' in src.lower() or 'logo' in alt.lower() or 'logo' in class_str or 'logo' in id_str:
+                if is_valid_logo_url(src, alt):
+                    score = 0
+                    if src.lower().endswith('/logo.png') or src.lower().endswith('/logo.svg') or src.lower().endswith('/logo.jpg'):
+                        score += 10
+                    if 'header' in class_str or 'brand' in class_str:
+                        score += 5
+                    candidates.append((score, urljoin(base_url, src)))
+                    
+        # Check background images
+        for tag in header.find_all(True):
             style = tag.get('style', '')
-            if 'background' in style.lower():
+            if 'background' in style.lower() and 'url' in style.lower():
                 match = bg_regex.search(style)
                 if match:
                     bg_url = match.group(1)
                     if 'logo' in bg_url.lower() and is_valid_logo_url(bg_url):
-                        return urljoin(base_url, bg_url)
-                
+                        score = 0
+                        if bg_url.lower().endswith('/logo.png') or bg_url.lower().endswith('/logo.svg'): score += 10
+                        candidates.append((score, urljoin(base_url, bg_url)))
+
+    if candidates:
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        return candidates[0][1]
     return ""

@@ -58,6 +58,7 @@ def clean_search_name(name: str) -> str:
         name = max(parts, key=len).strip()
         
     name = name.replace(',', ' ')
+    name = name.replace('&', 'and')
     # Remove things in parentheses
     name = re.sub(r'\(.*?\)', '', name)
     # Strip extra whitespace
@@ -147,18 +148,18 @@ def process_college(college_data: dict) -> dict:
                 if validate_and_return(local_path, result, "Tier 4: OpenGraph", og_url, "High", original_name):
                     return result
                     
-            # TIER 5: JSON-LD Structured Data
-            ld_url = get_json_ld_logo(soup, website)
-            if ld_url:
-                local_path = download_logo(ld_url, original_name)
-                if validate_and_return(local_path, result, "Tier 5: JSON-LD", ld_url, "High", original_name):
-                    return result
-                    
-            # TIER 6: Header Logo
+            # TIER 5: Header Logo
             header_url = get_header_logo(soup, website)
             if header_url:
                 local_path = download_logo(header_url, original_name)
-                if validate_and_return(local_path, result, "Tier 6: Header Logo", header_url, "Medium", original_name):
+                if validate_and_return(local_path, result, "Tier 5: Header Logo", header_url, "Medium", original_name):
+                    return result
+                    
+            # TIER 6: JSON-LD Structured Data
+            ld_url = get_json_ld_logo(soup, website)
+            if ld_url:
+                local_path = download_logo(ld_url, original_name)
+                if validate_and_return(local_path, result, "Tier 6: JSON-LD", ld_url, "Medium", original_name):
                     return result
                     
             # TIER 7: Common Paths
