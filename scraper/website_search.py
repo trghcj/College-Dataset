@@ -48,7 +48,72 @@ import threading
 
 search_lock = threading.Lock()
 
+import requests
+
+def search_clearbit(college_name: str) -> str:
+    url = f"https://autocomplete.clearbit.com/v1/companies/suggest?query={urllib.parse.quote(college_name)}"
+    try:
+        resp = requests.get(url, timeout=5)
+        if resp.status_code == 200:
+            data = resp.json()
+            if data and isinstance(data, list):
+                for item in data:
+                    if item.get('domain'):
+                        return f"https://{item['domain']}/"
+    except Exception as e:
+        logger.debug(f"Clearbit error: {e}")
+    return ""
+
+def search_wikipedia_extlinks(college_name: str) -> str:
+    # First search wiki to get the exact title
+    import requests
+    headers = {'User-Agent': 'CollegeDB-Bot/1.0'}
+    search_url = "https://en.wikipedia.org/w/api.php"
+    search_params = {"action": "query", "list": "search", "srsearch": college_name, "format": "json", "utf8": 1, "srlimit": 1}
+    try:
+        s_resp = requests.get(search_url, headers=headers, params=search_params, timeout=5).json()
+        results = s_resp.get("query", {}).get("search", [])
+        if not results: return ""
+        title = results[0]["title"]
+        
+        # Now get extlinks for this title
+        ext_params = {"action": "query", "prop": "extlinks", "titles": title, "ellimit": 500, "format": "json"}
+        e_resp = requests.get(search_url, headers=headers, params=ext_params, timeout=5).json()
+        pages = e_resp.get("query", {}).get("pages", {})
+        if not pages: return ""
+        extlinks = list(pages.values())[0].get('extlinks', [])
+        
+        valid_urls = []
+        for l in extlinks:
+            url = l.get('*', '')
+            if url and 'http' in url and not is_blacklisted_domain(url):
+                domain = extract_domain(url)
+                priority = get_domain_priority(domain)
+                valid_urls.append((priority, url))
+        
+        if valid_urls:
+            valid_urls.sort(key=lambda x: x[0])
+            # Only return if it's a high priority domain (.ac.in, .edu.in) to avoid false positives
+            if valid_urls[0][0] < 99:
+                return valid_urls[0][1]
+    except Exception as e:
+        logger.debug(f"Wiki extlinks error: {e}")
+    return ""
+
 def search_official_website(college_name: str, max_retries: int = 3) -> str:
+    # 1. Fast, highly accurate lookup
+    cb_url = search_clearbit(college_name)
+    if cb_url:
+        logger.info(f"Found official website via Clearbit: {cb_url}")
+        return cb_url
+        
+    # 2. Wikipedia External Links lookup
+    wiki_url = search_wikipedia_extlinks(college_name)
+    if wiki_url:
+        logger.info(f"Found official website via Wikipedia ExtLinks: {wiki_url}")
+        return wiki_url
+
+    # 3. Fallback to DDGS (rate-limited)
     query = f"{college_name} official website"
     
     for attempt in range(max_retries):
