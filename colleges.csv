@@ -1,317 +1,212 @@
 college_name,city,state,rank
-"Indian Institute Of Technology, Madras",Chennai,Tamil Nadu,1
-"Indian Institute Of Science Education & Research, Mohali",Mohali,Punjab,1
 Indian Institute of Science Bangalore,Bengaluru,Karnataka,1
-Indian Institute of Technology Madras,Chennai,Tamil Nadu,1
-"Indian Institute Of Technology, Bombay",Bombay,Maharashtra,2
-"Indian Institute of Science, Bengaluru",Bengaluru,Karnataka,2
-"Indian Institute Of Technology, Kharagpur",Kharagpur,West Bengal,3
-Indian Institute of Technology Bombay,Mumbai,Maharashtra,3
 Indian Institute of Technology Delhi,New Delhi,Delhi,3
-"Indian Institute Of Technology, Delhi",New Delhi,Delhi,4
+Indian Institute of Technology Bombay,Mumbai,Maharashtra,3
 Indian Institute of Technology Kharagpur,Kharagpur,West Bengal,4
-"Indian Institute Of Technology, Kanpur",Kanpur,Uttar Pradesh,5
-Indian Institute of Technology Kanpur,Kanpur,Uttar Pradesh,5
-"Indian Institute Of Technology, Roorkee",Roorkee,Uttarakhand,6
 Jawaharlal Nehru University,New Delhi,Delhi,6
-"Indian Institute Of Technology, Hyderabad",Hyderabad,Telangana,7
-Indian Institute of Technology Roorkee,Roorkee,Uttarakhand,7
-NIT Trichy - National Institute of Technology Tiruchirappalli,Tiruchirappalli,Tamil Nadu,8
-"Indian Institute Of Technology, Gandhinagar",Ahmedabad,Gujarat,8
-Indian Institute of Technology Guwahati,Guwahati,Assam,8
+IIT Guwahati - Indian Institute of Technology,Guwahati,Assam,7
+IIT Hyderabad - Indian Institute of Technology,Hyderabad,Telangana,9
 IIT BHU - Indian Institute of Technology Banaras Hindu University,Varanasi,Uttar Pradesh,9
-"Indian Institute Of Technology, Ropar-Rupnagar",Rupnagar,Punjab,9
-NIT Surathkal - National Institute of Technology Karnataka,Surathkal,Karnataka,10
 "Anna University, Chennai",Chennai,Tamil Nadu,10
-"Indian Institute Of Technology, Patna",Patna,Bihar,10
-"Jadavpur University, Kolkata",Kolkata,West Bengal,11
-"Indian Institute Of Technology, North Guwahati",Guwahati,Assam,11
 Jawaharlal Nehru Centre for Advanced Scientific Research,Bengaluru,Karnataka,11
 University of Hyderabad,Hyderabad,Telangana,11
-Calcutta University,Kolkata,West Bengal,11
-VIT Vellore - Vellore Institute of Technology,Vellore,Tamil Nadu,12
+"Jadavpur University, Kolkata",Kolkata,West Bengal,11
 "Amrita Vishwa Vidyapeetham, Coimbatore",Coimbatore,Tamil Nadu,12
 "National Institute Of Technology, Tiruchirappalli",Tiruchirappalli,Tamil Nadu,12
-Indian Institute of Technology Hyderabad,Hyderabad,Telangana,12
 "Jamia Millia Islamia,New Delhi",New Delhi,Delhi,12
+VIT Vellore - Vellore Institute of Technology,Vellore,Tamil Nadu,12
 JMI New Delhi - Jamia Millia Islamia,New Delhi,Delhi,13
-"Jamia Millia Islamia, New Delhi",New Delhi,Delhi,13
-"Indian Institute Of Technology (Banaras Hindu University), Varanasi",Varanasi,Uttar Pradesh,14
 University of Delhi,Delhi,Delhi,14
 Manipal Academy of Higher Education-Manipal,Manipal,Karnataka,14
 "Manipal Academy of Higher Education, Manipal",Manipal,Karnataka,14
 SVNIT Surat - Sardar Vallabhbhai National Institute of Technology,Surat,Gujarat,15
-AMU Aligarh - Aligarh Muslim University,Aligarh,Uttar Pradesh,16
-"Indian Institute Of Technology, Indore",Indore,Madhya Pradesh,16
-Savitribai Phule Pune University,Pune,Maharashtra,16
 Birla Institute of Technology & Science -Pilani,Pilani,Rajasthan,16
-BITS Pilani - Birla Institute of Technology and Science,RANCHI,Jharkhand,17
+Savitribai Phule Pune University,Pune,Maharashtra,16
+AMU Aligarh - Aligarh Muslim University,Aligarh,Uttar Pradesh,16
 ICT Mumbai - Institute of Chemical Technology,Mumbai,Maharashtra,18
 "Visvesvaraya National Institute Of Technology, Nagpur (Deemed University)-Nagpur",Nagpur,Maharashtra,18
 "National Institute Of Technology, Rourkela-Rourkela",Rourkela,Odisha,19
-"Indian Institute Of Technology, Mandi",Mandi,Himachal Pradesh,20
 Homi Bhabha National Institute,Mumbai,Maharashtra,20
 Bharathiar University,Coimbatore,Tamil Nadu,20
 "College Of Engineering, Pune",PUNE,Maharashtra,21
-S.R.M. Institute of Science and Technology,Chennai,Tamil Nadu,21
 "National Institute Of Technology, Karnataka-Mangalore",Mangalore,Karnataka,22
-MNNIT Allahabad - Motilal Nehru National Institute of Technology Allahabad Prayagraj,Allahabad,Uttar Pradesh,23
 Indian Agricultural Research Institute,New Delhi,Delhi,23
+MNNIT Allahabad - Motilal Nehru National Institute of Technology Allahabad Prayagraj,Allahabad,Uttar Pradesh,23
 Indian Institute of Science Education & Research Pune,Pune,Maharashtra,23
-"Birla Institute of Technology and Science, Pilani",Pilani,Rajasthan,23
-SRM University Chennai - SRM Institute of Science and Technology,Chennai,Tamil Nadu,24
+Siksha `O` Anusandhan,Bhubaneswar,Odisha,24
 Psg College Of Technology-Coimbatore,COIMBATORE,Tamil Nadu,24
 Indian Institute of Technology Indore,Indore,Madhya Pradesh,24
-Indian Institute of Technology Gandhinagar,Ahmedabad,Gujarat,24
-Siksha `O` Anusandhan,Bhubaneswar,Odisha,24
-"Amity University, Noida",Gautam Budh Nagar,Uttar Pradesh,25
-"Indian Institute Of Technology, Jodhpur",Jodhpur,Rajasthan,25
+SRM University Chennai - SRM Institute of Science and Technology,Chennai,Tamil Nadu,24
 Indian Institute of Technology (Indian School of Mines),Dhanbad,Jharkhand,25
-Indian Institute of Science Education & Research Kolkata,Mohanpur,West Bengal,25
-"Indian Institute Of Technology, Bhubaneswar",Bhubaneswar,Odisha,26
-"Indian Institute of Science Education & Research, Pune",Pune,Maharashtra,26
-KIIT University - Kalinga Institute of Industrial Technology,Bhubaneswar,Odisha,27
+"Amity University, Noida",Gautam Budh Nagar,Uttar Pradesh,25
 Thapar University-Patiala,PATIALA,Punjab,27
 "National Institute of Technology Karnataka, Surathkal",Surathkal,Karnataka,27
+"Siksha 'O' Anusandhan, Bhubaneswar",Bhubaneswar,Odisha,27
+KIIT University - Kalinga Institute of Industrial Technology,Bhubaneswar,Odisha,27
 Thapar University - Thapar Institute of Engineering and Technology,Patiala,Punjab,28
-"National Institute Of Technology, Warangal",Warangal,Telangana,28
-Tamil Nadu Agricultural University,Coimbatore,Tamil Nadu,28
-Indian Institute of Technology (Banaras Hindu University) Varanasi,Varanasi,Uttar Pradesh,28
-"Andhra University College of Engineering, Visakhapatnam",Visakhapatnam,Andhra Pradesh,29
 Thiagarajar College Of Engineering-Madurai,MADURAI,Tamil Nadu,29
 University of Madras,Chennai,Tamil Nadu,29
-"National Institute Of Technology, Durgapur",Durgapur,West Bengal,30
+"Andhra University College of Engineering, Visakhapatnam",Visakhapatnam,Andhra Pradesh,29
+IIT Jodhpur - Indian Institute of Technology,Jodhpur,Rajasthan,30
 Amrita School Of Engineering,KARUNAGAPALLY,Kerala,31
-Visva Bharati,Kolkata,West Bengal,31
-Indian Institute of Technology Ropar,Rupnagar,Punjab,31
+NIT Calicut - National Institute of Technology,Kozhikode,Kerala,31
 Jamia Hamdard,New Delhi,Delhi,31
-VNIT Nagpur - Visvesvaraya National Institute of Technology,Nagpur,Maharashtra,32
-"Chandigarh University, Chandigarh",Mohali,Punjab,32
+Indian Institute of Technology Ropar,Rupnagar,Punjab,31
+Visva Bharati,Kolkata,West Bengal,31
 Kalinga Institue Of Industrial Technology,BHUBANESWAR,Odisha,32
-Birla Institute of Technology & Science - Pilani,Pilani,Rajasthan,32
+"Chandigarh University, Chandigarh",Mohali,Punjab,32
+Siksha`O` Anusandhan University,Bhubaneswar,Odisha,33
 "Panjab University, Chandigarh",Chandigarh,Chandigarh,33
 M. S. Ramaiah Institute Of Technology-Bangalore,BANGALORE,Karnataka,33
-Siksha`O` Anusandhan University,Bhubaneswar,Odisha,33
-Coimbatore Institute Of Technology-Coimbatore,COIMBATORE,Tamil Nadu,34
-National Institute of Technology Rourkela,Rourkela,Odisha,34
 Mysore University,Mysore,Karnataka,34
+Coimbatore Institute Of Technology-Coimbatore,COIMBATORE,Tamil Nadu,34
 DTU Delhi - Delhi Technological University,New Delhi,Delhi,35
-"National Institute Of Technology, Calicut",Calicut,Kerala,35
 R.V. College Of Engineering-Bengaluru,BENGALURU,Karnataka,35
-Bharath Institute of Higher Education & Research,Chennai,Tamil Nadu,35
 Kerala University,Thiruvananthapuram,Kerala,35
-IIEST Shibpur - Indian Institute of Engineering Science and Technology,Shibpur,West Bengal,36
-Indian Institute of Technology Patna,Patna,Bihar,36
+Bharath Institute of Higher Education & Research,Chennai,Tamil Nadu,35
+IIT Bhubaneswar - Indian Institute of Technology,Bhubaneswar,Odisha,36
 JSS Academy of Higher Education and Research,Mysore,Karnataka,36
-"Malaviya National Institute Of Technology, Jaipur",Jaipur,Rajasthan,37
 Indian Institute of Technology Mandi,Mandi,Himachal Pradesh,37
-Indian Institute of Science Education & Research Bhopal,Bhopal,Madhya Pradesh,37
 "University College of Engineering, Osmania University, Hyderabad",Hyderabad,Telangana,38
 Pec University Of Technology-Chandigarh,CHANDIGARH,Chandigarh,38
 "Kalasalingam Academy of Research and Education, Virudhunagar",Srivilliputtur,Tamil Nadu,39
 MIT Manipal - Manipal Institute of Technology,MANIPAL,Karnataka,39
-"Punjab Agricultural University, Ludhiana",Ludhiana,Punjab,40
-"Indian Institute of Science Education & Research, Kolkata",Mohanpur,West Bengal,40
 Symbiosis International University,Pune,Maharashtra,40
 Koneru Lakshmaiah Education Foundation University,Vaddeswaram,Andhra Pradesh,40
 Thapar Institute of Engineering and Technology (Deemed-to-be-university),Patiala,Punjab,40
+"Punjab Agricultural University, Ludhiana",Ludhiana,Punjab,40
 Jamia Millia Islamia (A Central University),NEW DELHI,Delhi,41
 "Andhra University, Visakhapatnam",Visakhapatnam,Andhra Pradesh,41
-"Dr. B R Ambedkar National Institute Of Technology, Jalandhar",Jalandhar,Punjab,42
-Indian Institute of Science Education and Research Pune,Pune,Maharashtra,42
 IIST Thiruvananthapuram - Indian Institute of Space Science and Technology,Thiruvananthapuram,Kerala,43
-Gauhati University,Guwahati,Assam,43
 Alagappa University,Karaikudi,Tamil Nadu,43
-KL University Guntur - Koneru Lakshmaiah Education Foundation,Guntur,Andhra Pradesh,44
-Karunya University - Karunya Institute of Technology and Sciences,Coimbatore,Tamil Nadu,44
+Gauhati University,Guwahati,Assam,43
 "Indian Institute Of Engineering Science And Technology, Shibpur",Howrah,West Bengal,44
-LPU Jalandhar - Lovely Professional University,Phagwara,Punjab,45
-"Institute Of Technology, Nirma University",Ahmedabad,Gujarat,45
+Karunya University - Karunya Institute of Technology and Sciences,Coimbatore,Tamil Nadu,44
 National Institute of Technology Warangal,Warangal,Telangana,45
-National Institute of Technology Calicut,Kozhikode,Kerala,45
+"Institute Of Technology, Nirma University",Ahmedabad,Gujarat,45
+LPU Jalandhar - Lovely Professional University,Phagwara,Punjab,45
 MNIT Jaipur - Malaviya National Institute of Technology,Jaipur,Rajasthan,46
 KEC Erode - Kongu Engineering College,PERUNDURAI,Tamil Nadu,46
 "Tezpur University, Tezpur",Tezpur,Assam,46
-Indian Institute of Technology Bhubaneswar,Bhubaneswar,Odisha,46
 sona College Of Technology-Salem,SALEM,Tamil Nadu,47
 SSN College of Engineering - Sri Sivasubramaniya Nadar College of Engineering,Kancheepuram,Tamil Nadu,48
 "National Institute Of Technology, Kurukshetra",Kurukshetra,Haryana,48
-"Visvesvaraya Technological University, Belagavi",Belgaum,Karnataka,49
-Pondicherry Engineering College,PUDUCHERRY,Pondicherry,49
 TATA Institute of Social Sciences,Mumbai,Maharashtra,49
+"Visvesvaraya Technological University, Belagavi",Belgaum,Karnataka,49
 Mahatma Gandhi University,Kottayam,Kerala,49
-"Amrita Viswa Vidyapeetham-Amrita Nagar (Po) ,Ettimadai","AMRITA NAGAR (PO) ,ETTIMADAI",Tamil Nadu,50
+Pondicherry Engineering College,PUDUCHERRY,Pondicherry,49
 Cochin University Of Science And Technology-Cochin,COCHIN,Kerala,50
-"National Institute Of Technology, Hamirpur",Hamirpur,Himachal Pradesh,51
-"National Institute Of Technology, Agartala",Agartala,Tripura,52
+"Amrita Viswa Vidyapeetham-Amrita Nagar (Po) ,Ettimadai","AMRITA NAGAR (PO) ,ETTIMADAI",Tamil Nadu,50
 G. B. Pant Universtiy of Agriculture and Technology,Pantnagar,Uttarakhand,52
 Kumaraguru College Of Technology-Coimbatore,COIMBATORE,Tamil Nadu,53
-Sathyabama University - Sathyabama Institute of Science and Technology,Chennai,Tamil Nadu,54
+"Birla Institute of Technology, Mesra (BIT Mesra) - Birla Institute of Technology",Kolkata,West Bengal,53
 B.S. Abdur Rahman Institute Of Science And Technology,Chennai,Tamil Nadu,54
 Sri Ramachandra Institute of Higher Education and Research,Chennai,Tamil Nadu,54
+Sathyabama University - Sathyabama Institute of Science and Technology,Chennai,Tamil Nadu,54
 S.R.M Institute of Science and Technology,Chennai,Tamil Nadu,55
-Indian Institute of Science Education & Research Mohali,Mohali,Punjab,55
-Bharathidasan University,Tiruchirappalli,Tamil Nadu,55
+IIT Tirupati - Indian Institute of Technology,YERPEDU,Andhra Pradesh,56
 Sant Longowal Institute Of Engineering & Technology-Sangrur,Sangrur,Punjab,56
-PSG Tech Coimbatore - PSG College of Technology,Coimbatore,Tamil Nadu,57
 "National Institute Of Technology, Meghalaya",Shillong,Meghalaya,57
-National Institute of Technology Surathkal,Surathkal,Karnataka,57
 Itm University - Gwalior (School Of Engineering & Technology)-Gwalior,GWALIOR,Madhya Pradesh,58
 "National Institute of Pharmaceutical Education and Research, Hyderabad",Hyderabad,Telangana,58
-Indian Institute of Science Education & Research Thiruvananthapuram,Thiruvananthapuram,Kerala,58
 University of Kashmir,Srinagar,Jammu and Kashmir,58
-Babasaheb Bhimrao Ambedkar University,Lucknow,Uttar Pradesh,58
-"Banasthali Vidyapith, Banasthali",Banasthali,Rajasthan,59
+Indian Institute of Science Education & Research Thiruvananthapuram,Thiruvananthapuram,Kerala,58
 UPES Dehradun - University of Petroleum and Energy Studies,Dehradun,Uttarakhand,59
 Pondicherry University,Puducherry,Pondicherry,59
-JIIT Noida - Jaypee Institute of Information Technology,Noida,Uttar Pradesh,60
+"Banasthali Vidyapith, Banasthali",Banasthali,Rajasthan,59
 Tamil Nadu Veterinary & Animal Sciences University,Chennai,Tamil Nadu,60
 "National Institute of Mental Health & Neuro Sciences, Bangalore",Bengaluru,Karnataka,60
-Bharati Vidyapeeth Deemed University College Of Engineering-Pune,PUNE,Maharashtra,61
+JIIT Noida - Jaypee Institute of Information Technology,Noida,Uttar Pradesh,60
 Sri Ramachandra University,Chennai,Tamil Nadu,61
-Indian Institute of Science Education and Research Kolkata,Mohanpur,West Bengal,61
-Bannari Amman Institute Of Technology-Sathyamangalam,SATHYAMANGALAM,Tamil Nadu,62
-Anand Agricultural University,Anand,Gujarat,62
+Bharati Vidyapeeth Deemed University College Of Engineering-Pune,PUNE,Maharashtra,61
 North Eastern Hill University,Shillong,Meghalaya,62
+Bannari Amman Institute Of Technology-Sathyamangalam,SATHYAMANGALAM,Tamil Nadu,62
 Gujarat University,Ahmedabad,Gujarat,62
+Anand Agricultural University,Anand,Gujarat,62
+NIT Patna - National Institute of Technology,Patna,Bihar,63
 "National Institute Of Technology, Raipur",Raipur,Chhattisgarh,63
 Dr. D. Y. Patil Vidyapeeth Pune,Pune,Maharashtra,63
-"Graphic Era University, Dehradun",Dehradun,Uttarakhand,64
 Vishwakarma Institute Of Technology-Pune,PUNE,Maharashtra,64
-Indian Institute of Science Education and Research Mohali,Mohali,Punjab,64
-"National Institute Of Technology, Silchar",Silchar,Assam,65
+"Graphic Era University, Dehradun",Dehradun,Uttarakhand,64
 Noorul Islam Centre For Higher Education,Kanyakumari,Tamil Nadu,66
-Indian Institute of Technology Jodhpur,Jodhpur,Rajasthan,66
-"National Institute Of Technology, Srinagar",Kashmir,Jammu and Kashmir,67
+MSRIT Bangalore - Ramaiah Institute of Technology,Bengaluru,Karnataka,67
 SVU Tirupati - Sri Venkateswara University,Tirupati,Andhra Pradesh,68
+IIT Palakkad - Indian Institute of Technology,Palakkad,Kerala,68
 "University Institute Of Chemical Technology, North Maharashtra University, Jalgaon",JALGAON,Maharashtra,68
+IIIT Delhi - Indraprastha Institute of Information Technology,New Delhi,Delhi,69
 National Institute Of Science & Technology-Berhampur,BERHAMPUR,Odisha,69
 Madurai Kamraj University,Madurai,Tamil Nadu,69
 Babasheb Bhimrao Ambedkar University,Lucknow,Uttar Pradesh,69
+MANIT Bhopal - Maulana Azad National Institute of Technology,Nadia,West Bengal,70
 Siddaganga Institute Of Technology-Tumkur,TUMKUR,Karnataka,70
-Chaitanya Bharathi Institute Of Technology-Hyderabad,HYDERABAD,Telangana,71
-National Institute of Technology Durgapur,Durgapur,West Bengal,71
 Datta Meghe Institute of Higher Education and Research,Wardha,Maharashtra,71
-Hindustan Institute Of Technology And Science (Hits),Chennai,Tamil Nadu,72
+DIAT Pune - Defence Institute of Advanced Technology,Pune,Maharashtra,71
+Chaitanya Bharathi Institute Of Technology-Hyderabad,HYDERABAD,Telangana,71
 Shiv Nadar University,Chithera,Uttar Pradesh,72
+Hindustan Institute Of Technology And Science (Hits),Chennai,Tamil Nadu,72
+SKCET Coimbatore - Sri Krishna College of Engineering and Technology,Coimbatore,Tamil Nadu,73
 Sagi Ramakrishnam Raju Engineering College-Bhimavaram,BHIMAVARAM,Andhra Pradesh,73
-GGSIPU Delhi - Guru Gobind Singh Indraprastha University,New Delhi,Delhi,74
 C.V.Raman College Of Engineering-Bhubaneswar,BHUBANESWAR,Odisha,74
 Jagadguru Sri Shivarathreeshwara University,Mysore,Karnataka,74
+GGSIPU Delhi - Guru Gobind Singh Indraprastha University,New Delhi,Delhi,74
 Kasegaon Education Societys Rajarambapu Institute Of Technology-Islampur,ISLAMPUR,Maharashtra,75
 "Indian Statistical Institute, Kolkata",Kolkata,West Bengal,75
 "National Institute Of Technology, Goa",Ponda,Goa,76
 Chaudhary Charan Singh Haryana Agricultural University,Hisar,Haryana,76
-"Pandit Dwarka Prasad Mishra Indian Institute Of Information Technology, Design And Manufacturing (IIITDM), Jabalpur",Jabalpur,Madhya Pradesh,77
-University of Jammu,Jammu Tawi,Jammu and Kashmir,77
+JNTUH University - Jawaharlal Nehru Technological University,Hyderabad,Telangana,76
 Visvesvaraya National Institute of Technology Nagpur,Nagpur,Maharashtra,77
-"National Institute Of Technology, Jamshedpur",Jamshedpur,Jharkhand,78
-Dr. B. R. Ambedkar National Institute of Technology,Jalandhar,Punjab,78
+University of Jammu,Jammu Tawi,Jammu and Kashmir,77
+"Pandit Dwarka Prasad Mishra Indian Institute Of Information Technology, Design And Manufacturing (IIITDM), Jabalpur",Jabalpur,Madhya Pradesh,77
 Indian Institute of Science Education and Research Bhopal,Bhopal,Madhya Pradesh,78
-"Indian Institute Of Information Technology, Design & Manufacturing (IIITD&M) Kancheepuram-Chennai",Chennai,Tamil Nadu,80
-Sri Sivasubrmaniya Nadar College of Engineering,Kalavakkam,Tamil Nadu,80
+Dr. B. R. Ambedkar National Institute of Technology,Jalandhar,Punjab,78
+"National Institute Of Technology, Jamshedpur",Jamshedpur,Jharkhand,78
+NSUT Delhi - Netaji Subhas University of Technology,Delhi,Delhi,79
 Guru Nanak Dev University,Amritsar,Punjab,80
-Centurion Institute Of Technology,JATNI,Odisha,81
+Sri Sivasubrmaniya Nadar College of Engineering,Kalavakkam,Tamil Nadu,80
 Guru Angad Dev Veterinary & Animal Sciences University,Ludhiana,Punjab,81
+Centurion Institute Of Technology,JATNI,Odisha,81
+IIIT Bangalore - International Institute of Information Technology,Bangalore,Karnataka,81
 Mumbai University,Mumbai,Maharashtra,81
 College Of Technology And Engineering-Udaipur,UDAIPUR,Rajasthan,82
-Madurai Kamaraj University,Madurai,Tamil Nadu,83
-National Institute of Technology Silchar,Silchar,Assam,83
+BMSCE Bangalore - BMS College of Engineering,Bengaluru,Karnataka,83
 VJTI Mumbai - Veermata Jijabai Technological Institute,MUMBAI,Maharashtra,84
 Dr. Y.S.Parmar University of Horticulture & Forestry,Solan,Himachal Pradesh,84
-KLE Academy of Higher Education and Research,Belagavi,Karnataka,84
-TCE Madurai - Thiagarajar College of Engineering,Madurai,Tamil Nadu,85
-K. K. Wagh Institute Of Engineering Education & Research-Nashik,NASHIK,Maharashtra,85
+Vel Tech Chennai - Vel Tech Rangarajan Dr Sagunthala R and D Institute of Science and Technology,Chennai,Tamil Nadu,84
 University of Agricultural Sciences,Dharwad,Karnataka,85
-"National Institute Of Technology, Patna",Patna,Bihar,87
+K. K. Wagh Institute Of Engineering Education & Research-Nashik,NASHIK,Maharashtra,85
 Indian Institute of Crop Processing Technology,Thanjavur,Tamil Nadu,87
-BVUCOE Pune - Bharati Vidyapeeth Deemed University College of Engineering,Pune,Maharashtra,88
+PEC Chandigarh - Punjab Engineering College,Chandigarh,Chandigarh,87
 "Vignan's Foundation For Science, Technology And Research",Guntur,Andhra Pradesh,88
-Shri Guru Gobind Singhji Institute Of Engineering And Technology-Nanded,NANDED,Maharashtra,89
 International Institute of Information Technology Hyderabad,Hyderabad,Telangana,89
+RVCE Bangalore - RV College of Engineering,Bengaluru,Karnataka,89
+Shri Guru Gobind Singhji Institute Of Engineering And Technology-Nanded,NANDED,Maharashtra,89
 DEI Agra - Dayalbagh Educational Institute,Agra,Uttar Pradesh,90
-"Christ University, Bangalore",Bengaluru,Karnataka,90
-Sri Ramakrishna Engineering College-Coimbatore,COIMBATORE,Tamil Nadu,90
 Calicut University,Calicut,Kerala,90
+Sri Ramakrishna Engineering College-Coimbatore,COIMBATORE,Tamil Nadu,90
+"SR University, Warangal",Warangal,Telangana,91
 Bengal Institute Of Technology,KOLKATA,West Bengal,91
-Bharath Institute of Higher Education and Research,Chennai,Tamil Nadu,91
 "Annamalai University, Annamalai Nagar",Annamalainagar,Tamil Nadu,92
-"National Institute Of Technology, Delhi",Delhi,Delhi,92
 Yeshwantrao Chavan College Of Engineering-Nagpur,NAGPUR,Maharashtra,93
-Adhiyamaan College Of Engineering (Engineering & Technology),HOSUR,Tamil Nadu,94
+IIIT Allahabad - Indian Institute of Information Technology,Prayagraj,Uttar Pradesh,93
 Mizoram University,Aizwal,Mizoram,94
 Sher-e-Kashmir University of Agricultural Science and Technology of Kashmir,Srinagar,Jammu and Kashmir,94
+Adhiyamaan College Of Engineering (Engineering & Technology),HOSUR,Tamil Nadu,94
+"Rajalakshmi Engineering College, Chennai",Chennai,Tamil Nadu,95
 KUK Kurukshetra - Kurukshetra University,Kurushetra,Haryana,95
+"The NorthCap University, Gurgaon",Gurugram,Haryana,96
 NIE Mysore - The National Institute of Engineering,MYSORE,Karnataka,96
+Acharya Nagarjuna University,Guntur,Andhra Pradesh,97
 "Government College Of Engineering, Aurangabad (Academic Autonomous)",AURANGABAD,Maharashtra,97
 Periyar University,Salem,Tamil Nadu,97
-Acharya Nagarjuna University,Guntur,Andhra Pradesh,97
-"Bangalore University, Bangalore",Bangalore,Karnataka,98
-Anand Institute Of Higher Technology,CHENNAI,Tamil Nadu,98
-"Indian Institute of Science Education & Research, Bhopal",Bhopal,Madhya Pradesh,98
-Goa University,Goa,Goa,98
 Manipal University Jaipur,Jaipur,Rajasthan,98
-NMIT Bangalore - Nitte Meenakshi Institute of Technology,Mangaluru,Karnataka,99
-MMMUT Gorakhpur - Madan Mohan Malaviya University of Technology,Gorakhpur,Uttar Pradesh,99
-Noida Institute Of Engineering & Technology,GAUTAM BUDH NAGAR,Uttar Pradesh,99
-University Institute Of Chemical Engineering And Technology,CHANDIGARH,Chandigarh,100
-IIT Madras - Indian Institute of Technology,Chennai,Tamil Nadu,1
-IIT Delhi - Indian Institute of Technology,New Delhi,Delhi,2
-IIT Bombay - Indian Institute of Technology,Mumbai,Maharashtra,3
-IIT Kanpur - Indian Institute of Technology,Kanpur,Uttar Pradesh,4
-IIT Kharagpur - Indian Institute of Technology,Kharagpur,West Bengal,5
-IIT Roorkee - Indian Institute of Technology,Roorkee,Uttarakhand,6
-IIT Guwahati - Indian Institute of Technology,Guwahati,Assam,7
-IIT Hyderabad - Indian Institute of Technology,Hyderabad,Telangana,9
-IIT Dhanbad - Indian Institute of Technology Indian School of Mines,Noida,Uttar Pradesh,14
-NIT Rourkela - National Institute of Technology,Rourkela,Odisha,15
-IIT Indore - Indian Institute of Technology,Indore,Madhya Pradesh,16
-IIT Mandi - Indian Institute of Technology,Mandi,Himachal Pradesh,20
-NIT Warangal - National Institute of Technology,Warangal,Telangana,21
-IIT Ropar - Indian Institute of Technology,Rupnagar,Punjab,22
-IIT Gandhinagar - Indian Institute of Technology,Gandhinagar,Gujarat,23
-"Siksha 'O' Anusandhan, Bhubaneswar",Bhubaneswar,Odisha,27
-IIT Jodhpur - Indian Institute of Technology,Jodhpur,Rajasthan,30
-NIT Calicut - National Institute of Technology,Kozhikode,Kerala,31
-IIT Patna - Indian Institute of Technology,Patna,Bihar,33
-NIT Durgapur - National Institute of Technology,Durgapur,West Bengal,34
-IIT Bhubaneswar - Indian Institute of Technology,Bhubaneswar,Odisha,36
-NIT Silchar - National Institute of Technology,Silchar,Assam,38
-NIT Kurukshetra - National Institute of Technology,Kurukshetra,Haryana,50
-NIT Jalandhar - Dr B R Ambedkar National Institute of Technology,Jalandhar,Punjab,52
-"Birla Institute of Technology, Mesra (BIT Mesra) - Birla Institute of Technology",Kolkata,West Bengal,53
-IIT Tirupati - Indian Institute of Technology,YERPEDU,Andhra Pradesh,56
-NIT Meghalaya - National Institute of Technology,Shillong,Meghalaya,60
-IIIT Hyderabad - International Institute of Information Technology,Hyderabad,Telangana,62
-NIT Patna - National Institute of Technology,Patna,Bihar,63
-NIT Raipur - National Institute of Technology,Raipur,Chhattisgarh,65
-NIT Srinagar - National Institute of Technology,Srinagar,Jammu and Kashmir,66
-MSRIT Bangalore - Ramaiah Institute of Technology,Bengaluru,Karnataka,67
-IIT Palakkad - Indian Institute of Technology,Palakkad,Kerala,68
-IIIT Delhi - Indraprastha Institute of Information Technology,New Delhi,Delhi,69
-MANIT Bhopal - Maulana Azad National Institute of Technology,Nadia,West Bengal,70
-DIAT Pune - Defence Institute of Advanced Technology,Pune,Maharashtra,71
-COEP Pune - College of Engineering,Pune,Maharashtra,72
-SKCET Coimbatore - Sri Krishna College of Engineering and Technology,Coimbatore,Tamil Nadu,73
-"Manipal University, Jaipur",Jaipur,Rajasthan,75
-JNTUH University - Jawaharlal Nehru Technological University,Hyderabad,Telangana,76
-NSUT Delhi - Netaji Subhas University of Technology,Delhi,Delhi,79
-NIT Agartala - National Institute of Technology,Agratala,Tripura,80
-IIIT Bangalore - International Institute of Information Technology,Bangalore,Karnataka,81
-IIITDM Jabalpur - PDPM Indian Institute of Information Technology Design and Manufacturing,Chennai,Tamil Nadu,82
-BMSCE Bangalore - BMS College of Engineering,Bengaluru,Karnataka,83
-Vel Tech Chennai - Vel Tech Rangarajan Dr Sagunthala R and D Institute of Science and Technology,Chennai,Tamil Nadu,84
-PEC Chandigarh - Punjab Engineering College,Chandigarh,Chandigarh,87
-NIT Goa - National Institute of Technology,"Ganpat Vidyanagar, Mehsana",Gujarat,88
-RVCE Bangalore - RV College of Engineering,Bengaluru,Karnataka,89
-NIT Jamshedpur - National Institute of Technology,Purbi Singhbhum,Jharkhand,90
-"SR University, Warangal",Warangal,Telangana,91
-IIIT Allahabad - Indian Institute of Information Technology,Prayagraj,Uttar Pradesh,93
-"Rajalakshmi Engineering College, Chennai",Chennai,Tamil Nadu,95
-"The NorthCap University, Gurgaon",Gurugram,Haryana,96
-SIT Tumkur - Siddaganga Institute of Technology,Tumkur,Karnataka,97
+"Bangalore University, Bangalore",Bangalore,Karnataka,98
+Goa University,Goa,Goa,98
 "CV Raman Global University, Bhubaneswar",Khordha,Odisha,98
-"Vignan's Foundation for Science Technology and Research, Guntur",Guntur,Andhra Pradesh,99
+Anand Institute Of Higher Technology,CHENNAI,Tamil Nadu,98
+Noida Institute Of Engineering & Technology,GAUTAM BUDH NAGAR,Uttar Pradesh,99
+MMMUT Gorakhpur - Madan Mohan Malaviya University of Technology,Gorakhpur,Uttar Pradesh,99
+NMIT Bangalore - Nitte Meenakshi Institute of Technology,Mangaluru,Karnataka,99
+University Institute Of Chemical Engineering And Technology,CHANDIGARH,Chandigarh,100
 "PES University, Bangalore",Bengaluru,Karnataka,100
 SMVDU Katra - Shri Mata Vaishno Devi University,Katra,Jammu and Kashmir,101
 BSAU Chennai - BS Abdur Rahman Crescent Institute of Science and Technology,Chennai,Tamil Nadu,102
@@ -322,16 +217,13 @@ MRIIRS Faridabad - Manav Rachna International Institute of Research and Studies,
 NIT Manipur - National Institute of Technology,Imphal,Manipur,109
 "College of Engineering, Trivandrum",Thiruvananthapuram,Kerala,110
 VSSUT Sambalpur - Veer Surendra Sai University of Technology,Burla,Odisha,111
-IIIT Guwahati - Indian Institute of Information Technology,Guwahati,Assam,112
 VNR VJIET Hyderabad - VNR Vignana Jyothi Institute of Engineering and Technology,Ghaziabad,Uttar Pradesh,113
 Amity University Gurgaon - Amity University,"Gurugram, Haryana",Haryana,114
-"Jain University, Bangalore",Bengaluru,Karnataka,115
 MIT-WPU Pune - Dr Vishwanath Karad MIT World Peace University,Pune,Maharashtra,116
 NHCE Bangalore - New Horizon College of Engineering,Bengaluru,Karnataka,121
 "Sri Krishna College of Technology, Coimbatore",Bangalore,Karnataka,122
 PSGITECH Coimbatore - PSG Institute of Technology and Applied Research,Coimbatore,Tamil Nadu,124
 "Nirma University, Ahmedabad",Ahmedabad,Gujarat,125
-NIT Hamirpur - National Institute of Technology,Hamirpur,Himachal Pradesh,128
 JNTUK Kakinada - Jawaharlal Nehru Technological University,Hyderabad,Telangana,129
 "Mepco Schlenk Engineering College, Sivakasi",Sivakasi,Tamil Nadu,130
 NIT Uttarakhand - National Institute of Technology,Srinagar (Garhwal),Uttarakhand,132
@@ -352,16 +244,13 @@ GRIET Hyderabad - Gokaraju Rangaraju Institute of Engineering and Technology,Pun
 MSU Baroda - Maharaja Sayajirao University of Baroda,Vadodara,Gujarat,149
 NIFFT Ranchi - National Institute of Advanced Manufacturing Technology,Ranchi,Jharkhand,150
 PEC Puducherry - Puducherry Technological University,Pune,Maharashtra,151
-HITS Chennai - Hindustan Institute of Technology and Science,Chennai,Tamil Nadu,152
 "Amity University, Gwalior",Gwalior,Madhya Pradesh,153
 "Mahindra University, Hyderabad",Hyderabad,Telangana,154
-"RMK Engineering College, Thiruvallur",Namakkal,Tamil Nadu,155
 "Sri Sai Ram Engineering College, Chennai",Chennai,Tamil Nadu,157
 "JSS Science and Technology University, Mysuru",Mysuru,Karnataka,158
 Vels University Chennai - Vel's Institute of Science Technology and Advanced Studies,Chennai,Tamil Nadu,159
 GCT Coimbatore - Government College of Technology,Ranavav,Gujarat,160
 "Silicon Institute of Technology, Bhubaneswar",Bhubaneswar,Odisha,161
-"Vardhaman College of Engineering, Hyderabad",Hyderabad,Telangana,162
 GHRCE Nagpur - GH Raisoni College of Engineering,Nagpur,Maharashtra,163
 "Sharda University, Greater Noida",Greater Noida,Uttar Pradesh,164
 "Sree Vidyanikethan Engineering College, Tirupati (SVEC Tirupati) - School of Engineering and Technology, Mohan Babu University",Tirupati,Andhra Pradesh,165
@@ -370,27 +259,22 @@ CBIT Hyderabad - Chaitanya Bharathi Institute of Technology,Hyderabad,Telangana,
 SPIT Mumbai - Sardar Patel Institute of Technology,Chandrapur,Maharashtra,168
 NEC Kovilpatti - National Engineering College,Dimapur,Nagaland,169
 "CVR College of Engineering, Hyderabad",Hyderabad,Telangana,170
-NIT Arunachal Pradesh - National Institute of Technology,Itanagar,Arunachal Pradesh,171
 AIT Pune - Army Institute of Technology,Lucknow,Uttar Pradesh,172
-NIT Sikkim - National Institute of Technology,South Sikkim,Sikkim,173
 "Sona College of Technology, Salem",Salem,Tamil Nadu,174
 CIT Chennai - Chennai Institute of Technology,CHENNAI,Tamil Nadu,175
 "NMAM Institute of Technology, Karkala Taluk",Ramanathapuram,Tamil Nadu,176
 IGDTUW Delhi - Indira Gandhi Delhi Technical University for Women,Delhi,Delhi,177
 SLIET Longowal - Sant Longowal Institute of Engineering and Technology,Longowal,Punjab,178
 "DIT University, Dehradun","Doiwala, Dehradun",Uttarakhand,179
-CMRIT Bangalore - CMR Institute of Technology,Bangalore,Karnataka,180
 "Easwari Engineering College, Chennai",Chennai,Tamil Nadu,181
 RGIPT Amethi - Rajiv Gandhi Institute of Petroleum Technology,Amethi,Uttar Pradesh,182
 IIITDM Kancheepuram - Indian Institute of Information Technology Design and Manufacturing,Chennai,Tamil Nadu,184
-YCCE Nagpur - Yeshwantrao Chavan College of Engineering,Washim,Maharashtra,185
 "GLA University, Mathura",Mathura,Uttar Pradesh,186
 "KIET Group of Institutions, Ghaziabad (KIET Ghaziabad) - KIET Group of Institutions",Ghaziabad,Uttar Pradesh,187
 GMRIT Rajam - GMR Institute of Technology,Sikakulam,Andhra Pradesh,188
 MMU Ambala - Maharishi Markandeshwar University,Ambala,Haryana,191
 GCET Greater Noida - Galgotias College of Engineering and Technology,Greater Noida,Uttar Pradesh,192
 DYPIET Pimpri - Dr DY Patil Institute of Technology,Kolhapur,Maharashtra,193
-NIT Delhi - National Institute of Technology,New Delhi,Delhi,194
 "KLE Technological University, Hubballi",Dharwad,Karnataka,196
 DJSCE Mumbai - Dwarkadas J Sanghvi College of Engineering,MUMBAI,Maharashtra,197
 SVCET Chittoor - Sri Venkateswara College of Engineering and Technology,Erode,Tamil Nadu,198
@@ -410,7 +294,6 @@ GEC Thrissur - Government Engineering College,Thrissur,Kerala,215
 GNIT Kolkata - Guru Nanak Institute of Technology,Delhi,Delhi,216
 HIT Kolkata - Heritage Institute of Technology,Kolkata,West Bengal,217
 IARE Hyderabad - Institute of Aeronautical Engineering,Hyderabad,Telangana,218
-IIIT Bhubaneswar - International Institute of Information Technology,Bhubaneswar,Odisha,220
 "JIS College of Engineering, Nadia",Bhopal,Madhya Pradesh,221
 JNTUA CEA Anantapur - JNTUA College of Engineering,Kaithal,Haryana,222
 JNTUCEK Kakinada - Jawaharlal Nehru Technological University College of Engineering,Hyderabad,Telangana,223
@@ -421,7 +304,6 @@ MAIT Delhi - Maharaja Agrasen Institute of Technology,Delhi,Delhi,227
 "Malla Reddy Engineering College, Secunderabad",Secunderabad,Telangana,228
 "Maulana Abul Kalam Azad University of Technology, Kolkata",Nadia,West Bengal,229
 NIT Kolkata - Narula Institute of Technology,New Town,West Bengal,230
-NIT Nagaland - National Institute of Technology,Dimapur,Nagaland,231
 NERIST Nirjuli - North Eastern Regional Institute of Science and Technology,Itanagar,Arunachal Pradesh,232
 "Panimalar Engineering College, Chennai",Thiruvallur,Tamil Nadu,233
 PVPSIT Vijayawada - Prasad V Potluri Siddhartha Institute of Technology,Vijayawada,Andhra Pradesh,234
@@ -429,7 +311,6 @@ PVPSIT Vijayawada - Prasad V Potluri Siddhartha Institute of Technology,Vijayawa
 RMKCET Thiruvallur - RMK College of Engineering and Technology,Namakkal,Tamil Nadu,236
 "RVR and JC College of Engineering, Guntur",Imphal West,Manipur,237
 RSET Kochi - Rajagiri School of Engineering and Technology,Ernakulam,Kerala,238
-RIT Chennai - Rajalakshmi Institute of Technology,Chennai,Tamil Nadu,239
 RGMCET Kurnool - Rajeev Gandhi Memorial College of Engineering and Technology,Nandyal,Andhra Pradesh,240
 "SNS College of Technology, Coimbatore",Coimbatore,Tamil Nadu,241
 SGSITS Indore - Shri Govindram Seksaria Institute of Technology and Science,Akola,Maharashtra,242
