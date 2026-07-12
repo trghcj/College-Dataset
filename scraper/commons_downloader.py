@@ -21,6 +21,7 @@ def resolve_commons_url(filename: str) -> str:
         filename = f"File:{filename}"
         
     url = "https://en.wikipedia.org/w/api.php"
+    is_svg = filename.lower().endswith('.svg')
     params = {
         "action": "query",
         "titles": filename,
@@ -28,6 +29,8 @@ def resolve_commons_url(filename: str) -> str:
         "iiprop": "url",
         "format": "json"
     }
+    if is_svg:
+        params["iiurlwidth"] = 500
     
     try:
         resp = requests.get(url, params=params, headers=HEADERS, timeout=10)
@@ -35,6 +38,8 @@ def resolve_commons_url(filename: str) -> str:
             pages = resp.json().get("query", {}).get("pages", {})
             for page_id, info in pages.items():
                 if "imageinfo" in info:
+                    if is_svg and "thumburl" in info["imageinfo"][0]:
+                        return info["imageinfo"][0]["thumburl"]
                     return info["imageinfo"][0]["url"]
     except Exception as e:
         logger.error(f"[Commons] Error resolving URL for {filename}: {e}")

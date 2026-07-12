@@ -124,9 +124,9 @@ def process_college(college_data: dict) -> dict:
                     return result
 
         # ---------------------------------------------------------
-        # Fetch Official Website for Tiers 2-6
+        # TIER 2: Website Search Pipeline
         # ---------------------------------------------------------
-        website = search_official_website(search_name)
+        website = search_official_website(search_name, college_data.get('city', ''), college_data.get('state', ''))
         if website:
             domain = extract_domain(website)
             
@@ -169,7 +169,30 @@ def process_college(college_data: dict) -> dict:
                 if validate_and_return(local_path, result, "Tier 7: Common Path", path_url, "Medium", original_name):
                     return result
 
-
+        # ---------------------------------------------------------
+        # Search Engine Fallbacks (Tiers 8-10)
+        # ---------------------------------------------------------
+        
+        # TIER 8: GitHub Search
+        github_url = search_github_logo(search_name)
+        if github_url:
+            local_path = download_logo(github_url, original_name)
+            if validate_and_return(local_path, result, "Tier 8: GitHub", github_url, "Medium", original_name):
+                return result
+                
+        # TIER 9: Filetype Search
+        filetype_url = search_filetype(search_name, "png") or search_filetype(search_name, "svg")
+        if filetype_url:
+            local_path = download_logo(filetype_url, original_name)
+            if validate_and_return(local_path, result, "Tier 9: Filetype Search", filetype_url, "Low", original_name):
+                return result
+                
+        # TIER 10: DuckDuckGo Image Search
+        ddg_image_url = search_ddg_image(search_name)
+        if ddg_image_url:
+            local_path = download_logo(ddg_image_url, original_name)
+            if validate_and_return(local_path, result, "Tier 10: DDG Images", ddg_image_url, "Low", original_name):
+                return result
 
         result['reason'] = 'All Tiers Exhausted'
         logger.warning(f"[{original_name}] All Tiers exhausted. Failed.")

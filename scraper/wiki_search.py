@@ -54,31 +54,59 @@ def search_wikipedia(college_name: str) -> tuple[str, str]:
             "srlimit": 5
         }
         
-        try:
-            resp = requests.get(url, headers=HEADERS, params=params, timeout=10)
-            if resp.status_code != 200: continue
-                
-            results = resp.json().get("query", {}).get("search", [])
-            for res in results:
-                title = res["title"]
-                snippet = res.get("snippet", "").lower()
-                
-                # Reject bad entities
-                if any(bad in snippet or bad in title.lower() for bad in BAD_KEYWORDS):
+        for attempt in range(3):
+            try:
+                resp = requests.get(url, headers=HEADERS, params=params, timeout=10)
+                if resp.status_code == 429:
+                    import time
+                    time.sleep(2)
                     continue
+                if resp.status_code != 200: 
+                    break
                     
-                score = fuzz.ratio(search_term.lower(), title.lower())
-                
-                # Boost if it contains good keywords
-                if any(good in title.lower() or good in snippet for good in GOOD_KEYWORDS):
-                    score += 30
+                results = resp.json().get("query", {}).get("search", [])
+                for res in results:
+                    title = res["title"]
+                    snippet = res.get("snippet", "").lower()
                     
-                if score > best_score:
-                    best_score = score
-                    best_title = title
+                    # Reject bad entities
+                    if any(bad in snippet or bad in title.lower() for bad in BAD_KEYWORDS):
+                        continue
+                        
+                    import re
+                    clean_snippet = re.sub(r'<[^>]+>', '', snippet).lower()
                     
-        except Exception as e:
-            logger.error(f"[WikiSearch] Search failed for {search_term}: {e}")
+                    score = fuzz.ratio(search_term.lower(), title.lower())
+                    
+                    # Boost if acronym matches title
+                    acronym = "".join([w[0] for w in search_term.replace('-', ' ').split() if w.lower() not in ['of', 'and', 'the', 'for', 'in', '&']]).upper()
+                    if len(acronym) >= 3 and acronym in title.upper().replace(' ', ''):
+                        score += 50
+                        
+                    # Boost if search term is heavily present in snippet
+                    if search_term.lower() in clean_snippet:
+                        score += 30
+                    elif len(search_term) > 10 and fuzz.partial_ratio(search_term.lower(), clean_snippet) > 90:
+                        score += 20
+                    
+                    # Boost if it contains good keywords
+                    if any(good in title.lower() or good in snippet for good in GOOD_KEYWORDS):
+                        score += 15
+                        
+                    # Penalize regional campuses if 'campus' not in search term
+                    if 'campus' in title.lower() and 'campus' not in search_term.lower():
+                        score -= 50
+                        
+                    if score > best_score:
+                        best_score = score
+                        best_title = title
+                        
+                break # If we succeed, break out of retry loop
+                        
+            except Exception as e:
+                logger.error(f"[WikiSearch] Search failed for {search_term}: {e}")
+                import time
+                time.sleep(1)
             
     if best_title:
         wd_id = get_wikidata_id(best_title)

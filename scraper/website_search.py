@@ -106,7 +106,7 @@ def search_wikipedia_extlinks(college_name: str) -> str:
         logger.debug(f"Wiki extlinks error: {e}")
     return ""
 
-def search_official_website(college_name: str, max_retries: int = 3) -> str:
+def search_official_website(college_name: str, city: str = "", state: str = "", max_retries: int = 3) -> str:
     # 1. Fast, highly accurate lookup
     cb_url = search_clearbit(college_name)
     if cb_url:
@@ -142,7 +142,10 @@ def search_official_website(college_name: str, max_retries: int = 3) -> str:
                 ranked_urls = []
                 # Extract long words from college name to match against domains
                 import re
-                name_words = [w.lower() for w in re.split(r'\W+', college_name) if len(w) >= 5 and w.lower() not in ['college', 'institute', 'engineering', 'technology', 'university', 'science', 'school', 'management', 'research', 'academy']]
+                ignore_words = ['college', 'institute', 'engineering', 'technology', 'university', 'science', 'school', 'management', 'research', 'academy']
+                if city: ignore_words.extend(city.lower().split())
+                if state: ignore_words.extend(state.lower().split())
+                name_words = [w.lower() for w in re.split(r'\W+', college_name) if len(w) >= 5 and w.lower() not in ignore_words]
                 
                 for url in valid_urls:
                     domain = extract_domain(url)
