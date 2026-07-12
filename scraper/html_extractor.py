@@ -46,7 +46,10 @@ def get_og_image(soup: BeautifulSoup, base_url: str) -> str:
     ]
     for tag in tags:
         if tag and tag.get('content'):
-            return urljoin(base_url, tag.get('content'))
+            img_url = tag.get('content')
+            # STRICT FILTER: OpenGraph images are often full posters. Only accept if it says 'logo'
+            if 'logo' in img_url.lower():
+                return urljoin(base_url, img_url)
     return ""
 
 def get_json_ld_logo(soup: BeautifulSoup, base_url: str) -> str:

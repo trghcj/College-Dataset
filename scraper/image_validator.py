@@ -26,13 +26,13 @@ def is_valid_logo(image_path: str) -> bool:
             if width > 1200 or height > 1200:
                 logger.info(f"Rejected {image_path}: Too large ({width}x{height})")
                 return False
-            if width < 75 and height < 75:
+            if width < 100 and height < 100:
                 logger.info(f"Rejected {image_path}: Too small ({width}x{height})")
                 return False
                 
             # 2. Aspect Ratio: Extreme panoramic banners are not logos
             aspect_ratio = max(width, height) / min(width, height)
-            if aspect_ratio > 8:
+            if aspect_ratio > 3.0:
                 logger.info(f"Rejected {image_path}: Extreme aspect ratio ({aspect_ratio:.1f})")
                 return False
                 
