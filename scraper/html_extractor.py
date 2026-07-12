@@ -77,9 +77,14 @@ def get_json_ld_logo(soup: BeautifulSoup, base_url: str) -> str:
     return ""
 
 def is_valid_logo_url(url: str, alt: str = "") -> bool:
-    """Checks if a URL or alt text contains badge/award keywords."""
+    """Checks if a URL or alt text contains badge/award or social media keywords."""
     combined = (url + " " + (alt or "")).lower()
-    badges = ['rank', 'badge', 'award', 'metric', 'nba', 'naac', 'aicte', 'iso', 'qs', 'nirf', 'nptel', 'swayam', 'ugc', 'mhrd', 'azadi', 'g20', 'campaign', 'banner']
+    badges = [
+        'rank', 'badge', 'award', 'metric', 'nba', 'naac', 'aicte', 'iso', 'qs', 'nirf', 
+        'nptel', 'swayam', 'ugc', 'mhrd', 'azadi', 'g20', 'campaign', 'banner',
+        'instagram', 'facebook', 'twitter', 'youtube', 'linkedin', 'whatsapp', 
+        'telegram', 'pinterest', 'discord', 'snapchat', 'tiktok', 'social', 'x.com'
+    ]
     for b in badges:
         if b in combined:
             return False
