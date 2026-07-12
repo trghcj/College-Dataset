@@ -76,6 +76,15 @@ def get_json_ld_logo(soup: BeautifulSoup, base_url: str) -> str:
             continue
     return ""
 
+def is_valid_logo_url(url: str, alt: str = "") -> bool:
+    """Checks if a URL or alt text contains badge/award keywords."""
+    combined = (url + " " + (alt or "")).lower()
+    badges = ['rank', 'badge', 'award', 'metric', 'nba', 'naac', 'aicte', 'iso', 'qs', 'nirf', 'nptel', 'swayam', 'ugc', 'mhrd', 'azadi', 'g20', 'campaign', 'banner']
+    for b in badges:
+        if b in combined:
+            return False
+    return True
+
 def get_header_logo(soup: BeautifulSoup, base_url: str) -> str:
     """Tier 5: Official Website Header Logo (incl. CSS background)"""
     if not soup: return ""
@@ -89,20 +98,23 @@ def get_header_logo(soup: BeautifulSoup, base_url: str) -> str:
         
     for header in headers:
         # Search by specific classes first
-        img = header.find("img", class_=lambda x: x and any(c in x.lower() for c in ['logo', 'brand', 'site-logo']))
-        if img and img.get('src'):
-            return urljoin(base_url, img.get('src'))
+        imgs = header.find_all("img", class_=lambda x: x and any(c in x.lower() for c in ['logo', 'brand', 'site-logo']))
+        for img in imgs:
+            if img and img.get('src') and is_valid_logo_url(img.get('src'), img.get('alt', '')):
+                return urljoin(base_url, img.get('src'))
             
         # Fallback to id
-        img = header.find("img", id=lambda x: x and 'logo' in x.lower())
-        if img and img.get('src'):
-            return urljoin(base_url, img.get('src'))
+        imgs = header.find_all("img", id=lambda x: x and 'logo' in x.lower())
+        for img in imgs:
+            if img and img.get('src') and is_valid_logo_url(img.get('src'), img.get('alt', '')):
+                return urljoin(base_url, img.get('src'))
             
         # Fallback to any image with 'logo' in src
         imgs = header.find_all("img")
         for i in imgs:
             if i.get('src') and 'logo' in i.get('src').lower():
-                return urljoin(base_url, i.get('src'))
+                if is_valid_logo_url(i.get('src'), i.get('alt', '')):
+                    return urljoin(base_url, i.get('src'))
                 
         # CSS Background Image check
         for tag in header.find_all(style=True):
@@ -111,7 +123,7 @@ def get_header_logo(soup: BeautifulSoup, base_url: str) -> str:
                 match = bg_regex.search(style)
                 if match:
                     bg_url = match.group(1)
-                    if 'logo' in bg_url.lower():
+                    if 'logo' in bg_url.lower() and is_valid_logo_url(bg_url):
                         return urljoin(base_url, bg_url)
                 
     return ""
