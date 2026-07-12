@@ -67,6 +67,7 @@ def search_clearbit(college_name: str) -> str:
 def search_wikipedia_extlinks(college_name: str) -> str:
     # First search wiki to get the exact title
     import requests
+    from collections import Counter
     headers = {'User-Agent': 'CollegeDB-Bot/1.0'}
     search_url = "https://en.wikipedia.org/w/api.php"
     search_params = {"action": "query", "list": "search", "srsearch": college_name, "format": "json", "utf8": 1, "srlimit": 1}
@@ -83,19 +84,24 @@ def search_wikipedia_extlinks(college_name: str) -> str:
         if not pages: return ""
         extlinks = list(pages.values())[0].get('extlinks', [])
         
-        valid_urls = []
+        domain_counts = Counter()
+        domain_to_url = {}
+        
         for l in extlinks:
             url = l.get('*', '')
-            if url and 'http' in url and not is_blacklisted_domain(url):
+            if url and 'http' in url and not is_ignored(url):
                 domain = extract_domain(url)
                 priority = get_domain_priority(domain)
-                valid_urls.append((priority, url))
+                if priority < 99:
+                    domain_counts[domain] += 1
+                    # Save the shortest URL for this domain (usually the homepage)
+                    if domain not in domain_to_url or len(url) < len(domain_to_url[domain]):
+                        domain_to_url[domain] = url
         
-        if valid_urls:
-            valid_urls.sort(key=lambda x: x[0])
-            # Only return if it's a high priority domain (.ac.in, .edu.in) to avoid false positives
-            if valid_urls[0][0] < 99:
-                return valid_urls[0][1]
+        if domain_counts:
+            # Get the most frequent high-priority domain
+            best_domain = domain_counts.most_common(1)[0][0]
+            return domain_to_url[best_domain]
     except Exception as e:
         logger.debug(f"Wiki extlinks error: {e}")
     return ""

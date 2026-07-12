@@ -5,6 +5,7 @@ import pandas as pd
 import urllib3
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
+import time
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -63,6 +64,7 @@ def clean_search_name(name: str) -> str:
     return re.sub(r'\s+', ' ', name).strip()
 
 def process_college(college_data: dict) -> dict:
+    time.sleep(1)
     original_name = college_data['college_name']
     
     result = {
@@ -244,7 +246,6 @@ def main():
             future_to_college = {executor.submit(process_college, c): c for c in to_process}
             
             for future in tqdm(as_completed(future_to_college), total=len(to_process), desc="Scraping Logos"):
-                time.sleep(0.5)
                 try:
                     res = future.result()
                     if res['status'] == 'success':
