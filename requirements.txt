@@ -9,3 +9,7 @@ wikipedia-api
 wikidata
 Pillow
 ddgs
+
+rembg
+onnxruntime
+playwright
